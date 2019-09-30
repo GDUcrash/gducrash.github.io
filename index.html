@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GD Ucrash - Website</title>
+	
+	<meta name="description" content="Welcome to my website! I'm GD Ucrash - web developer, designer and gamer.">
+	<meta property="og:image" content="https://gdcolon.com/tools/gdicon/img/Ucrash?form=cube">
+	<meta name="keywords" content="GDUcrash,Ucrash,gducrash,GD Ucrash,Geometry Dash">
+	<meta name="author" content="GD Ucrash">
+	<meta name=" theme-color" content="#007dfb">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header-wrap">
+		<div class="header-main">
+			<a href="#main">
+				<div class="section-logo">
+					<img src="media/ucrash.jpg" alt="Logo" height="34px" class="logo" draggable="false">
+					<h1>GD Ucrash</h1>
+				</div>
+			</a>
+			<div class="section-items">
+				<item><a href="#about">About</a></item>
+				<item><a href="#projects">Projects</a></item>
+				<item><a href="#social">Social</a></item>
+				<item><a href="#contact">Contact</a></item>
+			</div>
+		</div>
+	</div>
+	
+	<div class="header-placeholder" id="main"></div>
+	
+	<div class="main-banner">
+		<img src="media/ucrash.jpg" height="100px" draggable="false">
+		<h2 class="main-heading">Web Developer. Gamer. And this website's owner!</h2>
+		<p class="main-p" id="mainp">...</p>
+	</div>
+	
+	<div class="about-banner" id="about">
+		<div class="col-1">
+			<h2 class="about-heading">About Me</h2>
+			<p class="about-p">
+				Yo! My name is <b>Ucrash</b> and I'm a web developer, designer and gamer! <br> <br> 
+				I mostly do play a game called <b>Geometry Dash</b> (that's where "GD" prefix in my name came from), but I also do play some other games too! My real name is <b>Alexander</b> and I'm yet <b>13 years</b> old.<br> <br>
+				Scroll down to see some of my works, check my social media or ask me a question!
+			</p>
+			<a href="#projects"><button class="about-btn">Let's Start</button></a>
+		</div>
+		<div class="col-2">
+			<p>Here's some of my Twitter feed. Enjoy!</p>
+			<div class="twitter-inner">
+				<a class="twitter-timeline" href="https://twitter.com/gducrash?ref_src=twsrc%5Etfw">...</a>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</div>
+	</div>
+	
+	<div class="projects-banner" id="projects">
+		<h2 class="projects-heading">My latest projects</h2>
+		<p class="projects-p">Here's the list of project I've made or collaborated to:</p>
+		<div class="projects-list-wrap">
+			
+		</div>
+	</div>
+	
+	<div class="social-banner" id="social">
+		<h2 class="social-heading">Check out my social media as well!</h2>
+		<div class="socials-wrap">
+			<a href="https://twitter.com/gducrash" target="_blank">
+				<div class="social-block-wrap">
+					<div class="socials-block" title="Twitter">
+						<img src="media/twitter.png" alt="YouTube" draggable="false">	
+					</div>
+					<p>@gducrash</p>
+				</div>
+			</a>
+			<a href="https://www.youtube.com/channel/UCfPgDZBhCodHIFo6OOVcH2A" target="_blank">
+				<div class="social-block-wrap">
+					<div class="socials-block" title="YouTube">
+						<img src="media/youtube.png" alt="YouTube" draggable="false">
+					</div>
+					<p>GD Ucrash</p>
+				</div>
+			</a>
+			<a href="https://discord.gg/48psf9" target="_blank">
+				<div class="social-block-wrap">
+					<div class="socials-block" title="Discord">
+						<img src="media/discord.png" alt="Discord" draggable="false" style="transform: scale(1.2)">
+					</div>
+					<p>GD Ucrash#2105</p>
+				</div>
+			</a>
+			<a href="https://github.com/gducrash" target="_blank">
+				<div class="social-block-wrap">
+					<div class="socials-block" title="GitHub">
+						<img src="media/github.svg" alt="GitHub" draggable="false">
+					</div>
+					<p>@GDUcrash</p>
+				</div>
+			</a>
+			<a href="https://reddit.com/u/gducrash" target="_blank">
+				<div class="social-block-wrap">
+					<div class="socials-block" title="Reddit">
+						<img src="media/reddit.svg" alt="Reddit" draggable="false">
+					</div>
+					<p>u/GDUcrash</p>
+				</div>
+			</a>
+			<a href="https://account.xbox.com/profile?gamertag=gducrash" target="_blank">
+				<div class="social-block-wrap">
+					<div class="socials-block" title="Xbox Live">
+						<img src="media/xbox.png" alt="Xbox Live" draggable="false">
+					</div>
+					<p>gducrash</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="contact-banner" id="contact">
+		<h2 class="contact-heading">Contact Me</h2>
+		<p class="contact-p">Ask me a question, or ask for help with your website (I can help, but <b>not</b> make instead of you!)</p>
+		<div class="contact-form">
+			<div class="form-block">
+				<p>Type of message</p>
+				<select id="formType">
+					<option disabled="true">(Select)</option>
+					<option>Question</option>
+					<option>Asking for Help</option>
+					<option>Suggestion for the website</option>
+					<option>Other</option>
+				</select>
+			</div>
+			<div class="form-block">
+				<p>Your Name <span>*</span></p>
+				<input type="text" id="formName" placeholder="Enter Here">
+			</div>
+			<div class="form-block">
+				<p>Your Email Address <span>*</span></p>
+				<input type="email" id="formEmail" placeholder="Enter Here">
+			</div>
+			<div class="form-block">
+				<p>Message <span>*</span></p>
+				<textarea id="formMessage" placeholder="Write your message here" maxlength="100"></textarea>
+			</div>
+			<button id="formSend" onclick="sendData()">Send!</button>
+		</div>
+	</div>
+	
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+	
+	<script>
+		//smooth scrolling through anchors
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+		
+		//random messages on the main banner
+		let randomMain = [
+			'Y\'all check my <a href="https://twitter.com/gducrash" target="_blank">Twitter</a>, it\'s neat.',
+			'One of the best time wasters in this world!',
+			'Hey there, stranger. Let me show you something...',
+			'MINIMALISM IS GARBAGE!!!11!!!!1!',
+			'Haven\'t crashed yet',
+			'What is your favourite block in Minecraft?',
+			'Seriously? <b>.tk</b>?!?',
+			'I look so stupid on that picture...',
+			'And it even works underwater!'
+		];
+		document.getElementById('mainp').innerHTML = randomMain[Math.round(Math.random() * (randomMain.length-1))];
+		
+		//firebase
+		let firebaseConfig = {
+			apiKey: "AIzaSyAokW4R4OavUHLUHJb0UdLqXwE8zSeQw4Q",
+			authDomain: "gducrash-website.firebaseapp.com",
+			databaseURL: "https://gducrash-website.firebaseio.com",
+			projectId: "gducrash-website",
+			storageBucket: "",
+			messagingSenderId: "997056065374",
+			appId: "1:997056065374:web:74f49fc7d58c1849faa9cf"
+		};
+		
+		firebase.initializeApp(firebaseConfig);
+		
+		function getProjectsData(){
+			firebase.database().ref('projectsList').once('value').then(function(snapshot) {
+				let projectsCount = Object.keys(snapshot.val()).length;
+				for(let i = 0; i < projectsCount; i++){
+					let projectI = snapshot.val()[Object.keys(snapshot.val())[i]];
+					
+					let projectBox = document.createElement('div');
+					projectBox.classList.add('project-box');
+					let projectImg = document.createElement('img');
+					projectImg.classList.add('project-img');
+					projectImg.setAttribute('alt', 'Image');
+					projectImg.setAttribute('src', projectI.img);
+					projectBox.appendChild(projectImg);
+					let projectTitle = document.createElement('h4');
+					projectTitle.classList.add('project-title');
+					projectTitle.innerText = projectI.title;
+					projectBox.appendChild(projectTitle);
+					let projectDescription = document.createElement('p');
+					projectDescription.classList.add('project-description');
+					projectDescription.innerHTML = "<b>Author: </b>" + projectI.author + '<br><b>My role: </b>' + projectI.role + '<br><b>Date: </b>' + projectI.date ;
+					projectBox.appendChild(projectDescription);
+					let projectA = document.createElement('a');
+					projectA.setAttribute('href', projectI.link);
+					projectA.setAttribute('target', '_blank');
+					projectA.innerHTML = '<button class="project-btn">Check it out!</button>';
+					projectBox.appendChild(projectA);
+					document.getElementsByClassName('projects-list-wrap')[0].appendChild(projectBox);
+				}
+			});
+		}
+		
+		getProjectsData();
+		
+		
+		//contact form
+		document.getElementById('formType').value = "(Select)";
+		
+		function writeData(key, value) {
+			firebase.database().ref(key).set(value);
+		}
+		
+		function sendData(){
+			let type = document.getElementById('formType');
+			let name = document.getElementById('formName');
+			let email = document.getElementById('formEmail');
+			let message = document.getElementById('formMessage');
+			
+			if(name.value.split(' ').join('') == ""){
+				alert('Please, enter the name!');
+			}else if(email.value.split(' ').join('') == "" || !email.value.includes('@')){
+				alert('Please, enter valid email address!');
+			}else if(message.value.split(' ').join('') == ""){
+				alert('Please, write a message!')
+			}else{
+				firebase.database().ref('contactForms').once('value').then(function(snapshot) {
+					let formsCount = Object.keys(snapshot.val()).length;
+					
+					document.getElementById('formSend').innerText = "Sending...";
+					document.getElementById('formSend').setAttribute('onclick', '');
+					
+					writeData('contactForms/' + formsCount, {
+						email: email.value,
+						name: name.value,
+						type: type.value,
+						message: message.value
+					});
+					
+					document.getElementById('formSend').innerText = "Sent!";
+					document.getElementById('formSend').classList.add('green');
+				});
+			}
+		}
+	</script>
+</body>
+</html>
