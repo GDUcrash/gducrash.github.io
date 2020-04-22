@@ -26,12 +26,13 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+	alert('stop it. get some help');
 		window.onload = () => {
 			const fragment = new URLSearchParams(window.location.hash.slice(1));
 
-			if (fragment.has("access_token")) {
+			if (fragment.has("code")) {
 				const accessToken = fragment.get("access_token");
-				const tokenType = fragment.get("token_type");
+				const tokenType = fragment.get("code");
 
 				fetch('https://discordapp.com/api/users/@me', {
 					headers: {
