@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bd" style="display: none;">
+        <div id="logcd">
+            <p>Hi there! You have to authorize this website to Discord to be able to vote for videos!</p>
+            <a href="https://discordapp.com/api/oauth2/authorize?client_id=702578287016411157&redirect_uri=https%3A%2F%2Fgducrash.tk%2Fvoteweb&response_type=token&scope=identify">
+                <button id="btnLogin">
+                    Authorize to Discord
+                </button>
+            </a>
+        </div>
+        <div id="votcd">
+            <p id="welcp">Welcome, .. wait who are you?!</p>
+        </div>
+    </div>
+
+
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
 
@@ -27,31 +42,47 @@
     // Initialize Firebase
 
     firebase.initializeApp(firebaseConfig);
-		window.onload = () => {
-			const fragment = new URLSearchParams(window.location.hash.slice(1));
 
-			if (fragment.has("token_type")) {
-				const accessToken = fragment.get("access_token");
-				const tokenType = fragment.get("token_type");
+    let user = '';
 
-				fetch('https://discordapp.com/api/users/@me', {
-					headers: {
-						authorization: `${tokenType} ${accessToken}`
-					}
-				})
-					.then(res => res.json())
-					.then(response => {
-						const { username, discriminator } = response;
-						document.body.innerText += ` ${username}#${discriminator}`;
-					})
-					.catch(console.error);
+    let votcd = document.querySelector('#votcd');
+    let logcd = document.querySelector('#logcd');
+    let bd = document.querySelector('.bd');
 
-			}
-			else {
-                alert('authorize immediately')
-				window.location.href = "https://discordapp.com/api/oauth2/authorize?client_id=702578287016411157&redirect_uri=https%3A%2F%2Fgducrash.tk%2Fvoteweb&response_type=token&scope=identify"
-			}
-		}
+    votcd.style.display = 'none';
+    logcd.style.display = 'none';
+    bd.style.display = 'flex';
+
+    window.onload = () => {
+        const fragment = new URLSearchParams(window.location.hash.slice(1));
+
+        if (fragment.has("token_type")) {
+            const accessToken = fragment.get("access_token");
+            const tokenType = fragment.get("token_type");
+
+            fetch('https://discordapp.com/api/users/@me', {
+                headers: {
+                    authorization: `${tokenType} ${accessToken}`
+                }
+            })
+                .then(res => res.json())
+                .then(response => {
+                    const { username, discriminator } = response;
+                    user = ` ${username}#${discriminator}`;
+
+                    document.querySelector('#welcp').innerText = `Welcome, ${user}`
+
+                    votcd.style.display = 'block';
+                    logcd.style.display = 'none';
+                })
+                .catch(console.error);
+
+        }
+        else {
+            votcd.style.display = 'none';
+            logcd.style.display = 'block';
+        }
+    }
     </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    background: #fff;
+    height: 100vh;
+}
+
+.bd{
+    background: #222;
+    padding: 20px;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    padding: 20px 30px;
+    background: #7289DA;  
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,.5);
+}
+button:hover{
+    background: #7e95e9;
+    cursor: pointer;
+}
+button:active{
+    background: #687dca;
+}
+button:focus{
+    outline: none;
+}
+
+p{
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
