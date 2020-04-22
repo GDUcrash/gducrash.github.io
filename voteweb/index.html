@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD 2M VOTE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    let firebaseConfig = {
+        apiKey: "AIzaSyCGQtVoxuwr2mBQZrD1D687Txdl2EeoDbs",
+        authDomain: "cd2m-vote.firebaseapp.com",
+        databaseURL: "https://cd2m-vote.firebaseio.com",
+        projectId: "cd2m-vote",
+        storageBucket: "cd2m-vote.appspot.com",
+        messagingSenderId: "1026385726043",
+        appId: "1:1026385726043:web:9bf4906a26b06004798d7e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+		window.onload = () => {
+			const fragment = new URLSearchParams(window.location.hash.slice(1));
+
+			if (fragment.has("access_token")) {
+				const accessToken = fragment.get("access_token");
+				const tokenType = fragment.get("token_type");
+
+				fetch('https://discordapp.com/api/users/@me', {
+					headers: {
+						authorization: `${tokenType} ${accessToken}`
+					}
+				})
+					.then(res => res.json())
+					.then(response => {
+						const { username, discriminator } = response;
+						document.body.innerText += ` ${username}#${discriminator}`;
+					})
+					.catch(console.error);
+
+			}
+			else {
+				window.location.href = "https://discordapp.com/api/oauth2/authorize?client_id=702578287016411157&redirect_uri=https%3A%2F%2Fgducrash.tk&response_type=code&scope=identify"
+			}
+		}
+    </script>
+</body>
+</html>
