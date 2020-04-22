@@ -25,14 +25,14 @@
         appId: "1:1026385726043:web:9bf4906a26b06004798d7e"
     };
     // Initialize Firebase
+
     firebase.initializeApp(firebaseConfig);
-	alert('stop it. get some help');
 		window.onload = () => {
 			const fragment = new URLSearchParams(window.location.hash.slice(1));
 
-			if (fragment.has("code")) {
+			if (fragment.has("token_type")) {
 				const accessToken = fragment.get("access_token");
-				const tokenType = fragment.get("code");
+				const tokenType = fragment.get("token_type");
 
 				fetch('https://discordapp.com/api/users/@me', {
 					headers: {
@@ -48,7 +48,8 @@
 
 			}
 			else {
-				window.location.href = "https://discordapp.com/api/oauth2/authorize?client_id=702578287016411157&redirect_uri=https%3A%2F%2Fgducrash.tk%2Fvoteweb&response_type=code&scope=identify"
+                alert('authorize immediately')
+				window.location.href = "https://discordapp.com/api/oauth2/authorize?client_id=702578287016411157&redirect_uri=https%3A%2F%2Fgducrash.tk%2Fvoteweb&response_type=token&scope=identify"
 			}
 		}
     </script>
