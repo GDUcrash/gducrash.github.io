@@ -100,6 +100,9 @@ body{
 	align-items: center;
 	justify-content: center;
 }
+.main-banner img{
+	border-radius: 20px
+}
 
 .main-heading{
 	color: #fff;
